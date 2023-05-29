@@ -143,7 +143,7 @@ class Product1 extends StatelessWidget {
             width: 150.w,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("$img"),
+                image: NetworkImage("$img"),
                 fit: BoxFit.contain
                 )
             ),

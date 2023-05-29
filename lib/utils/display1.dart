@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:optilook/provider/provider1.dart';
-import 'package:optilook/screens/test.dart';
+import 'package:optilook/screens/landing.dart';
 import 'package:optilook/utils/multiText.dart';
 import 'package:provider/provider.dart';
 

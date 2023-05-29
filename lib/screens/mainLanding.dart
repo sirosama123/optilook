@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:circular_bottom_navigation/circular_bottom_navigation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:optilook/screens/test.dart';
+import 'package:optilook/screens/landing.dart';
 
-import '../screens/test2.dart';
+import 'landing2.dart';
 
 
 class Example extends StatelessWidget {
@@ -113,11 +113,11 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget slogan;
     switch (selectedPos) {
       case 0:
-        slogan = Test2();
+        slogan = Landing2();
         selectedColor=Colors.white;
         break;
       case 1:
-        slogan = Test1();
+        slogan = LandingPage();
         selectedColor=Colors.white;
         break;
       case 2:

@@ -15,7 +15,7 @@ import '../utils/multiText.dart';
 import 'crossout.dart';
 
 
-class Product2 extends StatelessWidget {
+class Product3 extends StatelessWidget {
   String? img;
   String? name;
   String? price;
@@ -23,22 +23,30 @@ class Product2 extends StatelessWidget {
   String? salePrice;
   String? description;
   String? description2;
-  Product2({super.key,required this.img,required this.name,required this.price,required this.regular,required this.salePrice,required this.description,required this.description2});
+  Product3({super.key,required this.img,required this.name,required this.price,required this.regular,required this.salePrice,required this.description,required this.description2});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 200.h,
-      width: 150.w,
+      width: 200.w,
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10.r),
-        border: Border.all(color: Colors.grey,width: 1),
-        //  image: DecorationImage(
-        //           image: AssetImage("assets/bg2.jpg"),opacity: 0.5,
-        //           fit: BoxFit.cover,
-        //           )
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10.r),
+          bottomRight: Radius.circular(10.r)
+        ),
+        border: Border.all(color: Colors.grey),
       ),
+      // height: 200.h,
+      // width: 150.w,
+      // decoration: BoxDecoration(
+      //   borderRadius: BorderRadius.circular(10.r),
+      //   border: Border.all(color: Colors.grey,width: 1),
+      //    image: DecorationImage(
+      //             image: AssetImage("assets/bg2.jpg"),opacity: 0.5,
+      //             fit: BoxFit.cover,
+      //             )
+      // ),
       child: Stack(
 
         children: [
@@ -48,7 +56,7 @@ class Product2 extends StatelessWidget {
             right: 0,
             child:Container(
                                   height: 30.h,
-                                  width: 70.w,
+                                  width: 30.w,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                       bottomRight: Radius.circular(10.r),
@@ -68,36 +76,12 @@ class Product2 extends StatelessWidget {
                                     child: Multi3(color: Colors.white, subtitle: "Add", weight: FontWeight.bold, size: 9),
                                   ),
                                 ), ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            child:Container(
-                                  height: 30.h,
-                                  width: 30.w,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(10.r),
-                                      topRight: Radius.circular(10.r)
-                                    ),
-                                    gradient: LinearGradient(colors: [Color(0xff36454f),Color.fromARGB(255, 34, 43, 49)]),
-                                    // boxShadow: [
-                                    //   BoxShadow(
-                                    //     offset: Offset(1, 1),
-                                    //     color: Color(0xff36454f),
-                                    //     blurRadius: 2,
-                                    //     spreadRadius: 1
-                                    //   )
-                                    // ]
-                                  ),
-                                  child: Container(
-                                  child: Icon(CupertinoIcons.heart_fill,color: Colors.red,size: 25,),
-                                ),
-                                ), ),
+         
           
           Column(
             children: [
               Expanded(
-                flex: 6,
+                flex: 8,
                 child: Container(
                   decoration: BoxDecoration(
                    
@@ -118,9 +102,9 @@ class Product2 extends StatelessWidget {
                           children: [
                            salePrice==""? Container(
                               width: 145.w,
-                              child: Multi(color: Color(0xff36454f), subtitle: "${name!.length>16?name.toString().substring(0,15)+"...":name}", weight: FontWeight.w900, size: 15)):Container(
+                              child: Multi(color: Color(0xff36454f), subtitle: "$name", weight: FontWeight.w900, size: 15)):Container(
                               width: 145.w,
-                              child: Multi(color: Color(0xff36454f), subtitle: "${name!.length>16?name.toString().substring(0,15)+"...":name}", weight: FontWeight.w900, size: 12)),
+                              child: Multi(color: Color(0xff36454f), subtitle: "$name", weight: FontWeight.w900, size: 12)),
                           ],
                         ),
                         // SizedBox(height: 2.h,),

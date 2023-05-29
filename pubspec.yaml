@@ -109,6 +109,12 @@ dependencies:
   flutter_carousel_slider: ^1.1.0
   photo_view: ^0.14.0
   flutter_smart_dialog: ^4.9.0+5
+  dotted_line: ^3.1.0
+  bubble_lens: ^2.0.0
+  syncfusion_flutter_gauges: ^20.4.54
+  drop_shadow: ^0.1.0
+  flutter_animation_progress_bar: ^2.3.1
+  cupertino_rounded_corners: ^2.1.1
 
 dev_dependencies:
   flutter_test:

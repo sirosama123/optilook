@@ -13,14 +13,14 @@ import '../utils/shape.dart';
 import '../utils/type2.dart';
 import '../utils/types.dart';
 
-class Test1 extends StatefulWidget {
-  const Test1({super.key});
+class LandingPage extends StatefulWidget {
+  const LandingPage({super.key});
 
   @override
-  State<Test1> createState() => _Test1State();
+  State<LandingPage> createState() => _LandingPageState();
 }
 
-class _Test1State extends State<Test1> {
+class _LandingPageState extends State<LandingPage> {
   final controller = ScrollController();
   void onListenerController(){
     setState(() {
@@ -469,44 +469,11 @@ class _Test1State extends State<Test1> {
                         ],
                       ),
                       SizedBox(height: 10.h,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(),
-                          Product2(img:'assets/img8.png',),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          Product2(img: 'assets/img3.png',),
-                          Container(),
-                        ],
-                      ),
+                    
                        SizedBox(height: 10.h,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(),
-                          Product2(img: 'assets/womanSun.png',),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          Product2(img: 'assets/menEye.png',),
-                          Container(),
-                        ],
-                      ),
+                     
                        SizedBox(height: 10.h,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Container(),
-                          Product2(img: 'assets/womenEye.png',),
-                          SizedBox(
-                            width: 10.w,
-                          ),
-                          Product2(img: 'assets/sunglasses.png',),
-                          Container(),
-                        ],
-                      ),
+                   
                       SizedBox(height: 10.h,),
                       Display1(
                         colors: [

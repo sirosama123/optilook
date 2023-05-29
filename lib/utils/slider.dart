@@ -8,9 +8,9 @@ import '../screens/photoViewer.dart';
 
 
 class MyApp2 extends StatefulWidget {
-  final String title;
+  List imgAddress;
 
-  MyApp2({ Key? key, required this.title}) : super(key: key);
+  MyApp2({ Key? key, required this.imgAddress}) : super(key: key);
 
   @override
   _MyApp2State createState() => _MyApp2State();
@@ -26,13 +26,13 @@ class _MyApp2State extends State<MyApp2> {
   //   Colors.indigo,
   //   Colors.purple,
   // ];
-  final List<String> imgAddress = [
-    "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/04/Attachment-Square-1.jpg?fit=1080%2C1080&ssl=1",
-    "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/04/Attachment-Square-2.jpg?fit=1080%2C1080&ssl=1",
-    "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/04/Attachment-Square-3.jpg?fit=1080%2C1080&ssl=1",
-    "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/03/OL-2.jpg?fit=300%2C149&ssl=1",
-    "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/03/OL-1.jpg?fit=300%2C200&ssl=1",
-  ];
+  // final List<String> imgAddress = [
+  //   "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/04/Attachment-Square-1.jpg?fit=1080%2C1080&ssl=1",
+  //   "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/04/Attachment-Square-2.jpg?fit=1080%2C1080&ssl=1",
+  //   "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/04/Attachment-Square-3.jpg?fit=1080%2C1080&ssl=1",
+  //   "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/03/OL-2.jpg?fit=300%2C149&ssl=1",
+  //   "https://i0.wp.com/optilookpk.com/wp-content/uploads/2023/03/OL-1.jpg?fit=300%2C200&ssl=1",
+  // ];
 
   bool _isPlaying = true;
 
@@ -60,14 +60,14 @@ class _MyApp2State extends State<MyApp2> {
                   onTap: (){
                     Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PhotoViewer(list1: imgAddress)),);
-                    print( imgAddress[index]);
+                    MaterialPageRoute(builder: (context) => PhotoViewer(list1: widget.imgAddress)),);
+                    print( widget.imgAddress[index]);
                   },
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      image: DecorationImage(image: NetworkImage(imgAddress[index]),fit: BoxFit.cover)
+                      image: DecorationImage(image: NetworkImage(widget.imgAddress[index]),fit: BoxFit.cover)
                     ),
                     
                   ),
@@ -78,7 +78,7 @@ class _MyApp2State extends State<MyApp2> {
                 padding: EdgeInsets.only(bottom: 10),
                 indicatorBorderColor: Colors.black,
               ),
-              itemCount: imgAddress.length,
+              itemCount: widget.imgAddress.length,
               initialPage: 0,
               enableAutoSlider: false,
               

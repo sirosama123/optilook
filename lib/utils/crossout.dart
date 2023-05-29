@@ -16,8 +16,8 @@ class CrossOut extends StatelessWidget {
     return Container(
       child: Text(
   subtitle,
-  style: GoogleFonts.openSans(
-    textStyle: TextStyle(color: color, letterSpacing: 0.2,fontSize: size.sp,fontWeight: weight,decoration: TextDecoration.lineThrough,decorationColor: Color(0xff36454f),decorationStyle:TextDecorationStyle.solid,decorationThickness: 4 ),
+  style: GoogleFonts.karla(
+    textStyle: TextStyle(color: color, letterSpacing: 0.2,fontSize: size.sp,fontWeight: weight,decoration: TextDecoration.lineThrough,decorationColor: Color(0xff36454f),decorationStyle:TextDecorationStyle.solid,decorationThickness: 2 ),
   ),
   textAlign: TextAlign.center,
   
